@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bilan Retraite & Audit Assurances — Bernard Tessalonikos</title>
+<title>Accompagnement Retraite & Audit Assurances — Bernard Tessalonikos</title>
 <style>
 :root{
   --brand:#9c1c28; --brand-2:#1b3a8a; --ink:#111; --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.08);
@@ -14,6 +14,7 @@ a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
 header{position:sticky;top:0;z-index:20;background:#ffffffcc;backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid #eee}
 .wrap{max-width:1100px;margin:auto;padding:16px}
 .nav{display:flex;align-items:center;gap:20px}
+.nav nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:flex-end}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--brand)}
 .nav .spacer{flex:1} .nav a.navlink{font-weight:600;color:#222}
 .topband{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(90deg,var(--brand),var(--brand-2));padding:10px 14px;color:#fff}
@@ -28,34 +29,40 @@ header{position:sticky;top:0;z-index:20;background:#ffffffcc;backdrop-filter:sat
 section{scroll-margin-top:120px} h2{font-size:28px;margin:0 0 12px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .feature h3{margin:8px 0 6px;font-size:18px} .feature p{margin:0;color:#374151;font-size:15px}
+.notice{border-left:5px solid var(--brand-2);background:#f3f6ff}
+.steps{counter-reset:step;list-style:none;margin:4px 0 0;padding:0}
+.steps li{counter-increment:step;display:flex;gap:12px;align-items:flex-start;margin:14px 0;color:#374151}
+.steps li::before{content:counter(step);display:grid;place-items:center;flex:0 0 32px;height:32px;border-radius:50%;background:var(--brand-2);color:#fff;font-weight:800}
+.legalgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
 .footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px} .legal{font-size:12px;color:#cbd5e1;margin-top:10px}
-@media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} .footgrid{grid-template-columns:1fr} }
+@media (max-width:900px){ .nav{align-items:flex-start;flex-direction:column}.nav .spacer{display:none}.nav nav{justify-content:flex-start;gap:10px 14px}.hero{grid-template-columns:1fr}.grid,.legalgrid{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr} }
 .page{display:none} .page.active{display:block}
 </style>
 
   <link rel="canonical" href="https://bernardtessalonikos.github.io/" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b3a8a'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Arial' font-size='40' fill='white'%3EB%3C/text%3E%3C/svg%3E">
-  <meta property="og/title" content="Bilan Retraite & Audit Assurances — Bernard Tessalonikos" />
-  <meta property="og/description" content="Conseils retraite, bilan de protection sociale et audit de vos assurances, à domicile ou en entreprise, dans le Chablais. RDV gratuit." />
-  <meta property="og/type" content="website" />
-  <meta property="og/url" content="https://bernardtessalonikos.github.io/" />
+  <meta name="description" content="Pointage de carrière, accompagnement retraite, bilan de protection sociale et audit de vos assurances dans le Chablais. Premier rendez-vous gratuit." />
+  <meta property="og:title" content="Accompagnement Retraite & Audit Assurances — Bernard Tessalonikos" />
+  <meta property="og:description" content="Pointage de carrière, accompagnement retraite, bilan de protection sociale et audit de vos assurances dans le Chablais. Premier rendez-vous gratuit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bernardtessalonikos.github.io/" />
   <meta name="twitter/card" content="summary" />
   <script type="application/ld+json">
   {
   "@context": "https://schema.org",
-  "@type": "InsuranceAgency",
+  "@type": "ProfessionalService",
   "name": "Bernard Tessalonikos",
-  "alternateName": "Mandataire d’intermédiaires en Assurance",
+  "alternateName": "Entrepreneur individuel — Mandataire d’intermédiaire d’assurance",
   "areaServed": "Chablais (Haute-Savoie)",
   "url": "https://bernardtessalonikos.github.io/",
   "email": "mailto:bernardtessa74@gmail.com",
   "telephone": "+33 6 07 98 08 08",
-  "image": "https://bernardtessalonikos.github.io/",
-  "sameAs": [],
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Chablais",
+    "streetAddress": "100 route du Champ Querbay",
+    "postalCode": "74500",
+    "addressLocality": "Saint-Paul-en-Chablais",
     "addressRegion": "Auvergne-Rhône-Alpes",
     "addressCountry": "FR"
   },
@@ -84,12 +91,13 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
   </div>
   <header>
     <div class="wrap nav">
-      <div class="brand"><span>Bilan Retraite & Audit Assurances</span></div>
+      <div class="brand"><span>Accompagnement Retraite & Audit Assurances</span></div>
       <div class="spacer"></div>
       <nav>
         <a class="navlink" href="#accueil">Accueil</a>
         <a class="navlink" href="#prestations">Prestations</a>
         <a class="navlink" href="#contact">Prendre RDV</a>
+        <a class="navlink" href="#informations-legales">Informations légales</a>
         <a class="navlink" href="#rgpd">RGPD</a>
       </nav>
     </div>
@@ -99,12 +107,12 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
     <section id="accueil" class="page active">
       <div class="hero">
         <div>
-          <h1>Conseils retraite & audit de vos assurances — <span style="color:var(--brand-2)">à domicile ou en entreprise</span></h1>
-          <p class="lead">Bonjour, je suis <strong>Bernard Tessalonikos</strong>, <strong>Mandataire d’intermédiaires en Assurance</strong> (ORIAS 14007335, SIRET 808 055 099 00010). J’interviens dans tout le <strong>Chablais</strong> pour réaliser un <strong>bilan de protection sociale</strong> et un <strong>audit de vos contrats</strong> (santé, prévoyance, retraite, épargne…), gratuitement et sans engagement.</p>
+          <h1>Accompagnement retraite & audit de vos assurances — <span style="color:var(--brand-2)">à domicile ou en entreprise</span></h1>
+          <p class="lead">Bonjour, je suis <strong>Bernard Tessalonikos</strong>, entrepreneur individuel et <strong>Mandataire d’intermédiaire d’assurance (MIA)</strong> (ORIAS 14007335, SIRET 808 055 099 00010). J’interviens dans tout le <strong>Chablais</strong> pour réaliser un <strong>bilan de protection sociale</strong>, un pointage de carrière et un <strong>audit de vos contrats</strong> (santé, prévoyance, retraite, épargne…). Le premier rendez-vous et l’accompagnement administratif annoncé sont gratuits et sans engagement.</p>
           <div class="badges">
-            <span class="badge">✔ RDV gratuit et rapide</span>
+            <span class="badge">✔ Premier RDV gratuit</span>
             <span class="badge">✔ Déplacement sur place</span>
-            <span class="badge">✔ Explications claires & neutres</span>
+            <span class="badge">✔ Explications claires & transparentes</span>
           </div>
           <p style="margin:8px 0 0;font-weight:600;color:var(--brand-2)">Je me déplace dans tout le <strong>Chablais</strong> !</p>
           <p style="margin:2px 0 14px;color:#1f2937">Disponible quand vous l’êtes, <strong>à votre domicile</strong> ou <strong>à votre entreprise</strong>.</p>
@@ -115,20 +123,20 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
             <a class="cta" style="background:#0a7;" href="mailto:bernardtessa74@gmail.com?subject=Demande%20de%20RDV%20—%20Bilan%20Retraite%20%26%20Audit&body=Bonjour%2C%20je%20souhaite%20un%20rendez-vous.%20Mes%20disponibilit%C3%A9s%20sont%20..." target="_blank" rel="noopener">✉️ Écrire un e‑mail</a>
           </div>
         </div>
-        <div class="card">
-          <img alt="Conseiller et dirigeant au bureau" src="https://images.unsplash.com/photo-1523958203904-cdcb402031fd?q=80&w=900&auto=format&fit=crop" style="width:100%;border-radius:14px;object-fit:cover;aspect-ratio:4/3"/>
-          <ul style="margin:14px 0 0 18px;color:#374151">
-            <li>Lecture simple de vos garanties actuelles</li>
-            <li>Repérage des doublons et manques</li>
-            <li>Pistes d’optimisation (sans obligation de changer)</li>
-          </ul>
+        <div class="card notice">
+          <h2 style="font-size:22px">Votre bilan en 3 étapes</h2>
+          <ol class="steps">
+            <li><span><strong>Faire le point</strong><br>Carrière, garanties actuelles et priorités.</span></li>
+            <li><span><strong>Identifier</strong><br>Oublis éventuels, doublons et besoins non couverts.</span></li>
+            <li><span><strong>Vous expliquer</strong><br>Démarches possibles et, si utile, solutions d’assurance adaptées.</span></li>
+          </ol>
         </div>
       </div>
 
       <div class="grid" style="margin-top:22px">
         <div class="card feature">
           <h3>💡 Le saviez‑vous ? Trimestres manquants</h3>
-          <p>Des <strong>trimestres non validés</strong> (études, petits boulots, service, maternité, expatriation…) peuvent souvent être <strong>récupérés ou régularisés</strong>. Je vous aide à <em>les repérer et à constituer les demandes</em>.</p>
+          <p>Une période absente ou incomplète (activité, chômage, maladie, maternité, service national, expatriation…) peut justifier une <strong>demande de vérification</strong>. Je vous aide à <em>la repérer et à préparer les justificatifs et courriers</em>. Seules les caisses de retraite décident de la validation ou de la correction des droits.</p>
           <p style="margin-top:8px"><a class="cta" href="#contact">Vérifier mes trimestres</a></p>
         </div>
         <div class="card feature">
@@ -148,14 +156,18 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
       <h2>Prestations</h2>
       <p style="color:#374151;margin-top:0">Des rendez-vous <strong>pédagogiques</strong>, orientés solutions concrètes, pour particuliers et dirigeants.</p>
       <div class="grid">
-        <div class="card feature"><h3>🧭 Bilan retraite</h3><p>Reconstitution de carrière, trimestres/points manquants, scénarios d’âge de départ, <em>retraite progressive à 60 ans</em>, estimation de revenus futurs et options de compléments.</p></div>
+        <div class="card feature"><h3>🧭 Bilan retraite</h3><p>Lecture et pointage du relevé de carrière, repérage des périodes à vérifier, préparation des demandes, scénarios d’âge de départ et étude de la <em>retraite progressive</em>. Les estimations officielles et décisions de droits relèvent des régimes de retraite.</p></div>
         <div class="card feature"><h3>🛡️ Protection du revenu</h3><p>Analyse santé/prévoyance : indemnités journalières, invalidité, décès. Mise en lumière des écarts entre régimes obligatoires et besoins réels.</p></div>
-        <div class="card feature"><h3>🏦 Épargne & fiscalité</h3><p>Lecture de vos contrats (PER, Article 82/62, assurance‑vie…). Optimisations possibles <em>sans surcoût</em> et avec une information claire sur la fiscalité.</p></div>
+        <div class="card feature"><h3>🏦 Épargne & fiscalité</h3><p>Lecture de vos contrats (PER, assurance‑vie, dispositifs d’entreprise…). Présentation des pistes envisageables et information claire sur leurs frais, risques, disponibilité et fiscalité.</p></div>
         <div class="card feature"><h3>🏠 Pro & particuliers</h3><p>Artisans, TNS, gérants SARL/SASU, professions libérales… Explications adaptées à votre statut et vos obligations.</p></div>
         <div class="card feature"><h3>🔎 Audit des contrats</h3><p>Comparaison de garanties, exclusions et tarifs. Priorité à l’optimisation de l’existant, puis, si utile, étude alternative.</p></div>
         <div class="card feature"><h3>🤝 Rendez‑vous sur place</h3><p>Je me déplace à domicile ou en entreprise dans tout le Chablais (Thonon, Évian, Publier, Douvaine, etc.).</p></div>
       </div>
-      <div class="card" style="margin-top:16px"><strong>Transparence</strong><p style="margin:6px 0 0;color:#374151">Document à vocation publicitaire — informations non contractuelles. Les préconisations tiennent compte de votre situation et des conditions générales des assureurs partenaires.</p></div>
+      <div class="card notice" style="margin-top:16px">
+        <strong>Gratuité et transparence</strong>
+        <p style="margin:6px 0 0;color:#374151">Le premier rendez-vous, le pointage du relevé de carrière et l’aide à la préparation des demandes administratives sont réalisés <strong>sans honoraires facturés au client</strong>. Ils s’inscrivent dans une démarche globale de bilan de protection sociale et d’intermédiation en assurance. Si vous choisissez ensuite de souscrire un contrat, je peux être rémunéré par une commission versée par mon mandant ou l’organisme assureur. Cette rémunération n’influence pas la décision des caisses de retraite.</p>
+        <p style="margin:8px 0 0;color:#374151">Je ne suis ni une caisse de retraite ni un service de l’État. L’accompagnement ne garantit pas la régularisation d’une période ou l’attribution de droits. Les documents officiels et les règles applicables au jour de l’étude prévalent.</p>
+      </div>
       <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
         <a class="cta" href="#contact">➡️ Je prends RDV</a>
         <a class="cta secondary" href="mailto:bernardtessa74@gmail.com?subject=Question%20avant%20RDV" target="_blank" rel="noopener">❓ Poser une question</a>
@@ -180,7 +192,8 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
             <label><input type="radio" name="canal" value="whatsapp" checked> WhatsApp</label>
             <label><input type="radio" name="canal" value="email"> E‑mail</label>
           </div>
-          <label style="font-size:13px;color:#374151;display:block;margin-bottom:10px"><input type="checkbox" required> J'accepte que mes données soient utilisées pour être recontacté. Voir <a href="#rgpd">RGPD</a>.</label>
+          <label style="font-size:13px;color:#374151;display:block;margin-bottom:6px"><input type="checkbox" required> J’accepte que mes données soient utilisées par Bernard Tessalonikos pour répondre à ma demande et me recontacter.</label>
+          <p style="font-size:12px;color:#6b7280;margin:0 0 10px">Champs obligatoires : nom et téléphone. Le site n’enregistre pas ce formulaire : votre message est transmis par le canal choisi. Détails, durée de conservation et droits dans la rubrique <a href="#rgpd">RGPD</a>. Si vous choisissez WhatsApp, les règles de confidentialité de ce service s’appliquent également.</p>
           <button class="cta" type="submit">➡️ Envoyer ma demande</button>
         </form>
       </div>
@@ -190,20 +203,59 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
         <div class="card feature"><h3>✉️ E‑mail</h3><p>Décrivez vos besoins et vos disponibilités.</p><p><a class="cta" style="background:#0a7;" href="mailto:bernardtessa74@gmail.com?subject=Demande%20de%20RDV%20—%20Bilan%20Retraite%20%26%20Audit&body=Bonjour%2C%20je%20souhaite%20un%20rendez-vous.%20Mes%20disponibilit%C3%A9s%20sont%20..." target="_blank" rel="noopener">Écrire maintenant</a></p></div>
       </div>
       <div class="card" style="margin-top:16px"><strong>Zone d'intervention</strong><p style="margin:6px 0 0;color:#374151">Chablais et environs (Haute‑Savoie) : Thonon‑les‑Bains, Évian‑les‑Bains, Saint‑Paul‑en‑Chablais, Publier, Amphion, Douvaine, Bons‑en‑Chablais, Allinges, etc.</p></div>
-      <div class="card" style="margin-top:16px"><strong>Mentions légales</strong><p style="margin:6px 0 0;color:#374151">Mandataire d’intermédiaires en Assurance — ORIAS 14007335 — SIRET 808 055 099 00010.<br/>Conformité & transparence : sur demande, remise d’une <em>lettre de mission</em> et des <em>DIA</em> réglementaires avant toute préconisation.</p></div>
+      <div class="card" style="margin-top:16px"><strong>Cadre professionnel</strong><p style="margin:6px 0 0;color:#374151">Entrepreneur individuel — Mandataire d’intermédiaire d’assurance — ORIAS 14007335 — sans encaissement de fonds. <a href="#informations-legales">Consulter les informations légales, mandants et modalités de réclamation</a>.</p></div>
+    </section>
+
+    <section id="informations-legales" class="page">
+      <h2>Informations légales et professionnelles</h2>
+      <div class="legalgrid">
+        <div class="card">
+          <h3 style="margin-top:0">Éditeur du site</h3>
+          <p><strong>Bernard Tessalonikos — Entrepreneur individuel (EI)</strong><br>
+          100 route du Champ Querbay, 74500 Saint-Paul-en-Chablais, France<br>
+          SIREN 808 055 099 — SIRET 808 055 099 00010 — RCS Thonon-les-Bains<br>
+          Téléphone : <a href="tel:+33607980808">06 07 98 08 08</a><br>
+          Courriel : <a href="mailto:bernardtessa74@gmail.com">bernardtessa74@gmail.com</a></p>
+          <p><strong>Directeur de la publication et responsable du site :</strong> Bernard Tessalonikos.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Statut réglementé</h3>
+          <p><strong>Mandataire d’intermédiaire d’assurance (MIA)</strong>, immatriculé à l’ORIAS sous le n° 14007335. Immatriculation vérifiable sur <a href="https://www.orias.fr/home/showIntermediaire/808055099" target="_blank" rel="noopener">le registre officiel de l’ORIAS</a>.</p>
+          <p><strong>Sans encaissement de fonds :</strong> aucun règlement de prime, cotisation ou autre somme destinée à un assureur ne doit m’être remis.</p>
+          <p>Autorité de contrôle : <strong>ACPR</strong>, 4 place de Budapest, CS 92459, 75436 Paris Cedex 09.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Mandants et rémunération</h3>
+          <p>Mandants déclarés au registre ORIAS à la date de la dernière mise à jour : <strong>CONTRASTE</strong> (SIREN 804 181 048) et <strong>VUAGNAT ASSURANCES</strong> (SIREN 480 016 963). Association professionnelle : <strong>ENDYA</strong>.</p>
+          <p>Le pointage de carrière et l’aide administrative annoncés sur ce site ne donnent lieu à aucun honoraire facturé au client. En cas de souscription d’un contrat d’assurance, la rémunération peut prendre la forme d’une commission versée par le mandant ou l’organisme assureur. Les informations précontractuelles précisent la nature de la rémunération et les conditions applicables.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Hébergement</h3>
+          <p>Site hébergé par <strong>GitHub Pages — GitHub, Inc.</strong><br>
+          88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.<br>
+          Site : <a href="https://github.com/" target="_blank" rel="noopener">github.com</a>.</p>
+          <p>Le contenu de ce site est informatif et publicitaire, non contractuel. Les documents réglementaires, contractuels et les conditions des organismes concernés prévalent.</p>
+        </div>
+      </div>
+      <div class="card notice" style="margin-top:16px">
+        <h3 style="margin-top:0">Réclamation et médiation</h3>
+        <p>Pour toute réclamation, écrivez à <strong>Bernard Tessalonikos</strong>, 100 route du Champ Querbay, 74500 Saint-Paul-en-Chablais, ou à <a href="mailto:bernardtessa74@gmail.com?subject=Réclamation">bernardtessa74@gmail.com</a>, en indiquant l’objet de votre réclamation et vos coordonnées. Un accusé de réception vous sera adressé dans un délai maximal de dix jours ouvrables et une réponse dans un délai maximal de deux mois, sauf disposition particulière.</p>
+        <p style="margin-bottom:0">Si la réponse ne vous satisfait pas, ou en l’absence de réponse dans le délai de deux mois, vous pouvez saisir gratuitement, après votre réclamation écrite préalable et sous réserve de sa compétence, <strong>La Médiation de l’Assurance</strong> sur <a href="https://www.mediation-assurance.org/" target="_blank" rel="noopener">mediation-assurance.org</a> ou par courrier : TSA 50110, 75441 Paris Cedex 09. Si un autre médiateur est désigné pour le contrat concerné, ses coordonnées figurent dans la documentation précontractuelle ou contractuelle remise.</p>
+      </div>
     </section>
 
     <section id="rgpd" class="page">
       <h2>RGPD — Protection des données</h2>
       <div class="card">
-        <p><strong>Responsable de traitement :</strong> Bernard Tessalonikos, Mandataire d’intermédiaires en Assurance (ORIAS 14007335) — SIRET 808 055 099 00010 — courriel : <a href="mailto:bernardtessa74@gmail.com" target="_blank" rel="noopener">bernardtessa74@gmail.com</a> — téléphone : <a href="tel:+33607980808">06 07 98 08 08</a>.</p>
-        <p><strong>Données traitées :</strong> identité, coordonnées, éléments nécessaires à la prise de rendez‑vous et à la préparation d’un bilan ou d’un audit (situation professionnelle/familiale sommaire, contrats détenus).</p>
-        <p><strong>Finalités et bases légales :</strong> prise de contact et prospection (intérêt légitime et/ou consentement), préparation d’un rendez‑vous et d’analyses précontractuelles (mesures précontractuelles à votre demande), suivi des demandes (intérêt légitime).</p>
-        <p><strong>Destinataires :</strong> exclusivement le responsable de traitement et, le cas échéant, les assureurs partenaires lorsque vous en faites la demande expresse.</p>
-        <p><strong>Durées de conservation :</strong> jusqu’à <strong>3 ans</strong> après le dernier contact pour la prospection, et selon obligations légales en cas de relation contractuelle.</p>
-        <p><strong>Vos droits :</strong> accès, rectification, effacement, limitation, opposition, portabilité. Pour les exercer : <a href="mailto:bernardtessa74@gmail.com?subject=Exercice%20de%20mes%20droits%20RGPD" target="_blank" rel="noopener">écrire un e‑mail</a>. Vous pouvez saisir la CNIL en cas de difficulté.</p>
-        <p><strong>Hébergement & sécurité :</strong> le site peut être hébergé chez GitHub Pages, Netlify ou OVH. Des mesures techniques et organisationnelles sont mises en œuvre pour protéger vos données.</p>
-        <p style="margin:0"><em>En utilisant le bouton WhatsApp, l’appel téléphonique ou l’e‑mail, vous consentez au traitement de vos données pour la finalité de prise de contact.</em></p>
+        <p><strong>Responsable du traitement :</strong> Bernard Tessalonikos, entrepreneur individuel — 100 route du Champ Querbay, 74500 Saint-Paul-en-Chablais — courriel : <a href="mailto:bernardtessa74@gmail.com">bernardtessa74@gmail.com</a> — téléphone : <a href="tel:+33607980808">06 07 98 08 08</a>.</p>
+        <p><strong>Données et caractère obligatoire :</strong> pour une demande de rappel, le nom et le téléphone sont nécessaires ; l’adresse électronique et le message sont facultatifs. Lors d’un rendez-vous, seules les informations utiles à votre demande, à l’analyse de votre situation et au respect des obligations réglementaires sont recueillies.</p>
+        <p><strong>Finalités et bases légales :</strong> répondre à votre demande et préparer un rendez-vous (mesures précontractuelles prises à votre demande) ; assurer le suivi de la relation et respecter les obligations légales et réglementaires applicables. Une éventuelle prospection électronique distincte ne sera réalisée qu’avec la base légale requise et la possibilité de s’y opposer.</p>
+        <p><strong>Fonctionnement du mini-formulaire :</strong> le site ne possède ni base de données ni espace client. À l’envoi, il prépare un message dans WhatsApp ou dans votre logiciel de messagerie ; vous gardez la maîtrise de son envoi. Ces services traitent ensuite les données selon leurs propres politiques.</p>
+        <p><strong>Destinataires :</strong> Bernard Tessalonikos et, uniquement lorsque cela est nécessaire à votre demande ou à l’étude d’une solution, les mandants, organismes assureurs et prestataires habilités concernés, dans la limite de leurs attributions.</p>
+        <p><strong>Durées de conservation :</strong> les données d’un prospect peuvent être conservées jusqu’à <strong>3 ans à compter de leur collecte ou du dernier contact émanant du prospect</strong>. En cas de relation contractuelle, les durées légales et réglementaires propres au dossier s’appliquent.</p>
+        <p><strong>Vos droits :</strong> selon la base légale applicable, vous pouvez demander l’accès, la rectification, l’effacement, la limitation, la portabilité ou vous opposer au traitement. Pour les exercer : <a href="mailto:bernardtessa74@gmail.com?subject=Exercice%20de%20mes%20droits%20RGPD">écrire un e‑mail</a> ou adresser un courrier à l’adresse ci-dessus. Vous pouvez introduire une réclamation auprès de la <a href="https://www.cnil.fr/" target="_blank" rel="noopener">CNIL</a>.</p>
+        <p><strong>Hébergement, sécurité et transferts :</strong> le site est hébergé par GitHub Pages. GitHub peut traiter des données techniques de connexion et opérer des transferts hors de l’Espace économique européen selon ses garanties contractuelles. Les échanges par WhatsApp ou e-mail comportent leurs propres traitements et mesures de sécurité.</p>
+        <p style="margin:0"><strong>Cookies :</strong> Bernard Tessalonikos ne dépose aucun cookie publicitaire ni outil de mesure d’audience sur ce site. Aucun bandeau de consentement n’est donc requis pour ces usages à ce jour.</p>
       </div>
     </section>
   </main>
@@ -212,9 +264,9 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
     <div class="wrap footgrid">
       <div>
         <h3 style="margin:10px 0 6px">Bernard Tessalonikos</h3>
-        <p style="margin:0;color:#cbd5e1">Bilan Retraite & Audit Assurances — Chablais</p>
+        <p style="margin:0;color:#cbd5e1">Accompagnement Retraite & Audit Assurances — Chablais</p>
         <p style="margin:8px 0 0">📞 <a href="tel:+33607980808">06 07 98 08 08</a> · ✉️ <a href="mailto:bernardtessa74@gmail.com" target="_blank" rel="noopener">bernardtessa74@gmail.com</a></p>
-        <p class="legal">Document à vocation publicitaire — Informations non contractuelles — © <span id="y"></span></p>
+        <p class="legal">Entrepreneur individuel — MIA ORIAS 14007335 — Sans encaissement de fonds.<br>Document à vocation publicitaire — Informations non contractuelles — © <span id="y"></span></p>
       </div>
       <div>
         <h4 style="margin:10px 0 6px">Prestations</h4>
@@ -225,20 +277,23 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
         </ul>
       </div>
       <div>
-        <h4 style="margin:10px 0 6px">RDV</h4>
+        <h4 style="margin:10px 0 6px">Informations</h4>
         <ul style="margin:0;padding:0;list-style:none;color:#e5e7eb">
           <li><a href="#contact">WhatsApp / Téléphone</a></li>
-          <li><a href="mailto:bernardtessa74@gmail.com" target="_blank" rel="noopener">E‑mail</a></li>
+          <li><a href="#informations-legales">Mentions légales</a></li>
+          <li><a href="#rgpd">Données personnelles</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
   <script>
-    const pages = ["accueil","prestations","contact","rgpd"];
+    const pages = ["accueil","prestations","contact","informations-legales","rgpd"];
     function show(hash){
       const id = (typeof hash === 'string' ? hash : (location.hash||"#accueil")).replace('#','');
-      pages.forEach(p=>document.getElementById(p).classList.toggle('active', p===id));
+      const activeId = pages.includes(id) ? id : "accueil";
+      pages.forEach(p=>document.getElementById(p).classList.toggle('active', p===activeId));
+      window.scrollTo({top:0, behavior:'smooth'});
     }
     addEventListener('hashchange',()=>show());
     show();
@@ -258,19 +313,19 @@ footer{margin-top:40px;background:#0f172a;color:#e5e7eb} footer a{color:#e5e7eb}
     document.getElementById('miniForm').addEventListener('submit', function(e){
       e.preventDefault();
       const f = e.target;
-      const nom = encodeURIComponent(f.nom.value.trim());
-      const tel = encodeURIComponent(f.tel.value.trim());
-      const email = encodeURIComponent(f.email.value.trim());
-      const msg = encodeURIComponent(f.msg.value.trim());
-      const body = `Nom: ${decodeURIComponent(nom)}%0ATél: ${decodeURIComponent(tel)}%0AEmail: ${decodeURIComponent(email)}%0AMessage: ${decodeURIComponent(msg)}`;
+      const nom = f.nom.value.trim();
+      const tel = f.tel.value.trim();
+      const email = f.email.value.trim();
+      const msg = f.msg.value.trim();
+      const body = `Nom : ${nom}\nTéléphone : ${tel}\nE-mail : ${email || 'non renseigné'}\nMessage : ${msg || 'non renseigné'}`;
       const fd = new FormData(f);
       const canal = fd.get('canal')||'whatsapp';
       if(canal==='whatsapp'){
-        const text = encodeURIComponent(`Bonjour Bernard, je souhaite un RDV. ${decodeURIComponent(body)}`);
+        const text = encodeURIComponent(`Bonjour Bernard, je souhaite un rendez-vous.\n\n${body}`);
         window.open(`https://wa.me/33607980808?text=${text}`, '_blank');
       } else {
         const subject = encodeURIComponent('Demande de RDV — Site vitrine');
-        window.location.href = `mailto:bernardtessa74@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:bernardtessa74@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
       }
     });
   </script>
